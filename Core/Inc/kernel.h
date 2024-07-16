@@ -17,7 +17,7 @@
 
 
 
-void kernelService (void* const pvParameters);
+bool kernel_init (void);
 
 #ifdef __cplusplus
   };

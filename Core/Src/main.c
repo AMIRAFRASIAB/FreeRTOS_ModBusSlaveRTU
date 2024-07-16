@@ -3,7 +3,7 @@
 #include "gpio.h"
 #include "FreeRTOS.h"
 #include "task.h"
-
+#include "kernel.h"
 void SystemClock_Config(void);
 
 __attribute__((noreturn)) int main (void) {
@@ -12,7 +12,8 @@ __attribute__((noreturn)) int main (void) {
   NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_4);
 
   SystemClock_Config();
-  xTaskCreate(
+  kernel_init();
+  vTaskStartScheduler();
   while (1) {
     __NOP();
   }

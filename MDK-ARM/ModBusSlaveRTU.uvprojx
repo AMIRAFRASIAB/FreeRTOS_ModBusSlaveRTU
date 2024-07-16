@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_FULL_LL_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\MiddleWare\FreeRTOS\portable\GCC\ARM_CM4F;..\MiddleWare\FreeRTOS\include</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\MiddleWare\FreeRTOS\portable\GCC\ARM_CM4F;..\MiddleWare\FreeRTOS\include;..\Libs\HeartBeat\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -409,6 +409,11 @@
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>kernel.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\kernel.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -494,6 +499,16 @@
               <FileName>heap_1.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MiddleWare\FreeRTOS\portable\MemMang\heap_1.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HeartBeat</GroupName>
+          <Files>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Libs\HeartBeat\Src\led.c</FilePath>
             </File>
           </Files>
         </Group>
